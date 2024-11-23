@@ -1,0 +1,12 @@
+# Env
+venv
+env
+
+# Python files
+**/__pycache__/*
+
+# Secrets
+.env
+
+# Logs
+logs
