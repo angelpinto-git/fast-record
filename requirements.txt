@@ -2,6 +2,8 @@
 fastapi== 0.115.4
 uvicorn==0.32.0
 
+# Data
+requests==2.32.3 
 # Config
 pydantic-settings==2.6.1
 

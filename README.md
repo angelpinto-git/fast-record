@@ -1,5 +1,6 @@
 # Fast-Expedientes
 Proyecto de Expedientes con FastAPI.-
+# Descripción del proyecto
 
 
 ## Dependencias
@@ -10,6 +11,6 @@ Dependencia es una extensión de la popular biblioteca Pydantic, que se utiliza 
 ## Puesta en marcha
 1. Crear un entorno virtual y activarlo.-
 2. Instalar dependencias utilizando una terminal con el comando '"pip install -r requirements.txt".-
-3. Ejecutar en una terminal con python el archivo 'main.py' con el comando "python main.py" o "py main.py".-
+3. Ejecutar en una terminal con python (versión: 3.12.6) el archivo 'main.py' con el comando "python main.py" o "py main.py".-
 4. Acceder a la documentación a través de FastAPI por un navegador ingresando en la barra de dirección "http://0.0.0.0/docs" o "http://0.0.0.0/redoc".-
 
