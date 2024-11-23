@@ -3,9 +3,10 @@ Proyecto de Expedientes con FastAPI.-
 
 
 ## Dependencias
-**fastapi:** Dependencia principal del proyecto. Framework de python. 
-**uvicorn:** servidor asincrónio para levantar la aplicación.-
-**pydantic-settings:** Dependencia es una extensión de la popular biblioteca Pydantic, que se utiliza principalmente para la validación de datos y la creación de modelos de datos en Python.-
+1. **fastapi:** Dependencia principal del proyecto. Framework de python. 
+2. **uvicorn:** servidor asincrónio para levantar la aplicación.-
+3. **pydantic-settings:** 
+Dependencia es una extensión de la popular biblioteca Pydantic, que se utiliza principalmente para la validación de datos y la creación de modelos de datos en Python.-
 ## Puesta en marcha
 1. Crear un entorno virtual y activarlo.-
 2. Instalar dependencias utilizando una terminal con el comando '"pip install -r requirements.txt".-
