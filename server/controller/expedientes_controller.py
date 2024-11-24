@@ -31,9 +31,9 @@ class ExpedientesController:
         except BaseHTTPException as ex:
             logger.error('Error al procesar request, status code {ex.status_code}: {ex.description}')
             self.__handler_http_exception(ex)
-        except Exception:
+        except Exception as ex:
             logger.critical(f'Error no contemplado en {__name__}.get_list')
-            raise InternalServerError()
+            raise InternalServerError(str(ex))
 
  
 
@@ -44,33 +44,33 @@ class ExpedientesController:
         except BaseHTTPException as ex:
             logger.error('Error al procesar request, status code {ex.status_code}: {ex.description}')
             self.__handler_http_exception(ex)
-        except Exception:
+        except Exception as ex:
             logger.critical(f'Error no contemplado en {__name__}.get_by_id')
-            raise InternalServerError()
+            raise InternalServerError(str(ex))
 
         
 
-    def update(self, id: int, new_data: RecordRequest) -> RecordResponse:
+    def update(self, record_id: int, new_data: RecordRequest) -> RecordResponse:
         try:
-            return self.service.update(id, new_data)
+            return self.service.update(record_id, new_data)
         except BaseHTTPException as ex:
             logger.error('Error al procesar request, status code {ex.status_code}: {ex.description}')
             self.__handler_http_exception(ex)
-        except Exception:
+        except Exception as ex:
             logger.critical(f'Error no contemplado en {__name__}.update')
-            raise InternalServerError()
+            raise InternalServerError(str(ex))
 
         
 
-    def delete(self, id: int) -> None:
+    def delete(self, record_id: int) -> None:
         try:
             self.delete(id)
         except BaseHTTPException as ex:
             logger.error('Error al procesar request, status code {ex.status_code}: {ex.description}')
             self.__handler_http_exception(ex)
-        except Exception:
+        except Exception as ex:
             logger.critical(f'Error no contemplado en {__name__}.delete')
-            raise InternalServerError()
+            raise InternalServerError(str(ex))
 
     def __handler_http_exception(self, ex: BaseHTTPException):
         if ex.status_code >= 500:
