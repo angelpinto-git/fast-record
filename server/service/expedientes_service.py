@@ -10,8 +10,8 @@ class ExpedientesService:
         self.record_repo = ExpedientesRepository()
 
     def create(self, new_record: NewRecordRequest) -> RecordResponse:
-        record_dict = self.record_repo_repo.create(new_record.model_dump())
-        return ExpedientesService(**record_dict)
+        record_dict = self.record_repo.create(new_record.model_dump())
+        return RecordResponse(**record_dict)
                                   
     def get_list(self, limit: int, offset: int) -> List[RecordResponse]:
         record_list = self.record_repo.get_list(limit, offset)

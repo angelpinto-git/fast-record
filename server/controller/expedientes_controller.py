@@ -21,9 +21,9 @@ class ExpedientesController:
         except BaseHTTPException as ex:
             logger.error('Error al procesar request, status code {ex.status_code}: {ex.description}')
             self.__handler_http_exception(ex)
-        except Exception:
+        except Exception as ex:
             logger.critical(f'Error no contemplado en {__name__}.create')
-            raise InternalServerError()
+            raise InternalServerError(str(ex))
 
     def get_list(self, limit: int, offset: int) -> List[RecordResponse]:
         try:
